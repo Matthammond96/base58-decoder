@@ -1,0 +1,15 @@
+{
+  "name": "base58",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo\"Error:notestspecified\"&&exit1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base58-js": "^2.0.0"
+  }
+}
