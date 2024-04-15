@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "base58-js": "^2.0.0"
+  },
+  "bin": {
+    "base58-decode": "index.js"
   }
 }
