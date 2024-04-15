@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo\"Error:notestspecified\"&&exit1"
+    "decode": "node index.js"
   },
   "author": "",
   "license": "ISC",
