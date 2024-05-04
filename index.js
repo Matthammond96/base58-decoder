@@ -13,7 +13,7 @@ function main(encodedString, outputPath) {
 
   const binaryResponse = [...base58_to_binary(encodedString)];
 
-  if (!outputPath) return console.log([...binaryResponse]);
+  if (!outputPath) return console.log(`[${[...binaryResponse].toString()}]`);
 
   try {
     // Check if folders exist and create when not to avoid writeFile errors
