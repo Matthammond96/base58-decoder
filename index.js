@@ -12,8 +12,9 @@ function main(encodedString, outputPath) {
   if (!encodedString) return console.error("Error: No encoded string found.");
 
   const binaryResponse = [...base58_to_binary(encodedString)];
+  const binaryString = `[${binaryResponse.join(",")}]`;
 
-  if (!outputPath) return console.log(`[${[...binaryResponse].toString()}]`);
+  if (!outputPath) return console.log(binaryString);
 
   try {
     // Check if folders exist and create when not to avoid writeFile errors
@@ -31,7 +32,7 @@ function main(encodedString, outputPath) {
       }
     }
 
-    fs.writeFileSync(outputPath, Buffer.from(`[${binaryResponse.join(", ")}]`));
+    fs.writeFileSync(outputPath, Buffer.from(binaryString));
 
     console.log(`Successfully decoded and saved to ${outputPath}`);
   } catch (err) {
